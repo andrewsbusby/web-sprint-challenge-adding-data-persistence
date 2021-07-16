@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
+    "start": "node index.js",
     "migrate": "knex migrate:latest",
     "migup": "knex migrate:up",
     "migdown": "knex migrate:down",
