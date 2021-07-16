@@ -2,7 +2,6 @@
 const express = require('express');
 
 const Resource = require('./model');
-const { checkResourcePayload } = require('./resource_middleware.js');
 
 const router = express.Router();
 
@@ -16,7 +15,7 @@ router.get('/', async (req, res, next) => {
     }
 })
 
-router.post('/', checkResourcePayload, async (req, res, next) => {
+router.post('/', async (req, res, next) => {
     try{
         const newResource = await Resource.create(req.body)
         res.json(newResource)
