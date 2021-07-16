@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-    return knex.shcema.createTable('resource', table =>{
+    return knex.schema.createTable('resource', table => {
         table.increments('resource_id')
 
         table.string('resource_name').notNullable().unique()
