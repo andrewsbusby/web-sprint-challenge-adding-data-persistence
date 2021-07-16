@@ -8,7 +8,7 @@ exports.up = function(knex) {
 
         table.boolean('task_completed')
 
-        table.string('project_id').notNullable().require('./projects_table')
+        table.integer('project_id').unsigned().notNullable().references('id').inTable('projects')
         
     })
 };
